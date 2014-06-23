@@ -1,0 +1,24 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <!-- Configuration for the default package. -->
+    <package name="default" extends="struts-default">
+        <action name="login" class="deae.controller.LoginAction">
+            <result name="success">home.jsp</result>
+            <result name="error">login.jsp</result>
+        </action>
+        <action name="resgiter" class="deae.controller.Register">
+            <result name="success">login.jsp</result>
+            <result name="error">crA.jsp</result>
+        </action>
+        <action name="logout" class="deae.controller.LoginAction" method="logout">
+            <result name="success">index.jsp</result>
+        </action>
+        <action name="addlocation" class="deae.controller.LocationAction">
+            <result name="success">crel.jsp</result>
+            <result name="error">crel.jsp</result>
+        </action>
+    </package>
+</struts>
